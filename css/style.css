@@ -4,7 +4,8 @@
     src: url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
          url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
-         url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype');
+         url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('../fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -16,11 +17,13 @@
     src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
          url('../fonts/opensans-regular-webfont.woff') format('woff'),
-         url('../fonts/opensans-regular-webfont.ttf') format('truetype');
+         url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
+
 
 html {
 	overflow-x: hidden;
@@ -40,6 +43,8 @@ body {
 	padding-top: 70px;
 	text-align: center;
 }
+
+/* MENU on 320-468 */
 .menu320 {
 	z-index: 1;
 	position: absolute;
@@ -60,6 +65,7 @@ body {
 .menu320__link--top {
 	font-size: 24px;
 	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+
 }
 .menu320__submenu {
 	display: none;
@@ -72,45 +78,42 @@ body {
 	border: 1px solid rgba(30, 40, 45, 1);
 	border-radius: 10px;
 	background: rgba(54, 41, 62, 0.9);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* данная строчка работает в IE6, IE7, и IE8 */
 }
 .menu320__subitem {
+	height: 40px;
+	line-height: 40px;
 	border-top: 1px solid rgba(101, 83, 108, 1); 
 	border-bottom: 1px solid rgba(73, 60, 80, 1); 
 }
-.menu320__sublink:hover {
+
+.menu320__subitem:hover {
+	height: 39px;
+	border-bottom: 2px solid #edbfff;
 	background: rgba(54, 41, 62, 1);
 }
+
 .menu320__subitem:first-child {
 	border-radius: 10px 10px 0 0;
 	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
 }
-.menu320__subitem:first-child:hover .menu__sublink {
-	height: 18px;
-	border-bottom: none;
+.menu320__subitem:first-child:hover {
 	border-radius: 10px 10px 0 0;
 }
+
 .menu320__subitem:last-child {
 	border-radius: 0 0 10px 10px;
 }
-.menu320__subitem:last-child:hover{
-	border-radius: 0 0 10px 10px;
-}
-.menu320__subitem:last-child:hover .menu__sublink:last-child {
+.menu320__subitem:last-child:hover {
 	border-radius: 0 0 10px 10px;
 }
 .menu320__sublink {
-	display: block;
-	height: 18px;
-	padding: 9px 0 13px 0;
-	color: rgb(255, 255, 255);
+	color: white;
 	font-family: 'league_gothicregular';
 	font-size: 24px;
-	line-height: 24px;
+	line-height: 40px;
 }
-.menu320__sublink:hover {
-	height: 16px;
-	border-bottom: 2px solid #edbfff;
-}
+
 .menu320__subactive {
 	position: absolute;
 	height: 2px;
